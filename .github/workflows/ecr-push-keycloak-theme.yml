@@ -40,9 +40,9 @@ jobs:
         with:
           context: .
           platforms: linux/amd64
-          push: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/staging' }}
+          push: ${{ github.ref == 'refs/heads/master' }}
           tags: |
-            ${{ steps.login-ecr.outputs.registry }}/keycloak_theme:latest-${{ github.ref_name }}
+            ${{ steps.login-ecr.outputs.registry }}/keycloak_theme:latest
             ${{ steps.login-ecr.outputs.registry }}/keycloak_theme:commit-${{ github.sha }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
