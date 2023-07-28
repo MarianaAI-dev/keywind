@@ -38,7 +38,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
-          context: ./keycloak-theme
+          context: .
           platforms: linux/amd64
           push: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/staging' }}
           tags: |
