@@ -64,6 +64,7 @@
         data-provider="${provider.alias}"
         href="${provider.loginUrl}"
         type="button"
+        target="_parent"
       >
         <#if providerIcons[provider.alias]??>
           <div class="h-6 w-6">
