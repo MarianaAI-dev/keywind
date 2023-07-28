@@ -1,9 +1,5 @@
 name: ecr-push-keycloak-theme
-on:
-  push:
-    paths:
-      - /**
-      - .github/workflows/ecr-push-keycloak-theme.yml
+on: push
 permissions:
   id-token: write
   contents: read
