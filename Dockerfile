@@ -12,3 +12,7 @@ RUN npm run build:jar
 FROM ubuntu:22.04
 COPY --from=builder /app/out/keywind.jar /theme/keywind.jar
 WORKDIR /theme
+
+RUN ls /theme
+
+CMD ["sh"]
