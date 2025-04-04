@@ -20,6 +20,6 @@ FROM node:18 as builder
 FROM ubuntu:22.04
 RUN apt-get update && apt-get install -y curl
 COPY ./theme ./theme
-RUN curl -L -o apple-identity-provider.jar https://github.com/klausbetz/apple-identity-provider-keycloak/releases/download/1.9.0/apple-identity-provider-1.9.0.jar
+RUN curl -L -o apple-identity-provider.jar https://github.com/klausbetz/apple-identity-provider-keycloak/releases/download/1.14.0/apple-identity-provider-1.14.0.jar
 WORKDIR /theme
 CMD ["sh"]
